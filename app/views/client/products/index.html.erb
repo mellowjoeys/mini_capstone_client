@@ -1,0 +1,11 @@
+<h1>Products Index</h1>
+
+<% @products.each do |product| %>
+  <h2><a href="http://localhost:3001/client/products/<%= product["id"] %>">Name: <%= product["name"] %></a></h2>
+  <h4>
+    <div>Description: <%= product["description"] %></div>
+    <div>Price: <%= product["formatted"]["price"] %></div>
+    <div>Tax: <%= product["formatted"]["tax"] %></div>
+    <div>Total: <%= product["formatted"]["total"] %></div>
+  </h4>
+<% end %>
